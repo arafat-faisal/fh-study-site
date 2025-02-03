@@ -122,3 +122,41 @@ iframe {
     max-width: 100%;
     overflow: hidden;
 }
+.sub-box {
+    background: #d9b3ff; /* Lighter purple */
+    border: 1px solid #b085f5;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.sub-box:hover {
+    transform: scale(1.02);
+    background: #c292ff;
+}
+
+.sub-box h3 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+/* Hide sub-box content by default */
+.sub-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.sub-box.active .sub-content {
+    max-height: 300px; /* Adjust height */
+}
+
+.sub-box iframe {
+    width: 100%;
+    height: 250px; /* Adjust height */
+    border: none;
+}
